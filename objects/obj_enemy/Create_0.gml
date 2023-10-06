@@ -58,11 +58,24 @@ move_enemy_idle = function(){
 
 
 move_enemy_chase = function(){
+	var x_antigo = x;
+    var y_antigo = y;
+    
+    // Verifica colisão com objetos ou limites do ambiente
+
    var dir_to_target = point_direction(x, y, target.x, target.y);
      hvel = lengthdir_x(vel, dir_to_target);
      vvel = lengthdir_y(vel, dir_to_target);
 	 x += hvel;
      y += vvel;
+	 // Salva a posição atual
+
+    if (collision_rectangle(x, y, x + sprite_width, y + sprite_height, obj_wall, false, true)) {
+        // Se houve uma colisão, restaure a posição anterior
+        x = x_antigo;
+        y = y_antigo;
+    }
+
 	target = instance_place(x, y, obj_player);
 	if(target == noone){
 		seesPlayer = false;
