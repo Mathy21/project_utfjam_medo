@@ -1,0 +1,1 @@
+move_enemy_idle();
