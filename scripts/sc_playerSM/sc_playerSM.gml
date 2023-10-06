@@ -8,6 +8,10 @@ function player_state_idle(){
 	_left	=keyboard_check(ord("A")); 
 	_right	=keyboard_check(ord("D"));
 	
+	if(stamina<max_stamina){
+		stamina += 10;
+	}
+	
 	if(_up || _down || _left || _right){
 		state = PLAYER_STATES.WALK;
 	}
@@ -17,11 +21,17 @@ function player_state_idle(){
 	if((_up || _down || _left || _right) && (keyboard_check_pressed(ord("C")))){
 		state = PLAYER_STATES.CROUCH;
 	}
+	if((keyboard_check(vk_shift)) && (_up || _down || _left || _right)){
+		state = PLAYER_STATES.RUNNING;
+	}
 }
 
 function player_state_walk(){
 	animation_start(sprite_grid[# dir,1]);
 	move();
+	if(stamina<max_stamina){
+		stamina += 5;
+	}
 	
 	if(vel_h == 0 && vel_v == 0){
 		state = PLAYER_STATES.IDLE;
@@ -32,10 +42,18 @@ function player_state_walk(){
 	if(keyboard_check_pressed(ord("C"))){
 		state = PLAYER_STATES.CROUCH;
 	}
+	if(keyboard_check(vk_shift) && stamina >= 20){
+		state = PLAYER_STATES.RUNNING;
+	}
 }
 
 function player_state_crouch(){
 	move_crouch();
+	
+	if(stamina<max_stamina){
+		stamina += 10;
+	}
+	
 	if(vel_h == 0 && vel_v == 0){
 		state = PLAYER_STATES.IDLE_CROUCH;
 	}
@@ -54,6 +72,10 @@ function player_state_crouch_idle(){
 	_left	=keyboard_check(ord("A")); 
 	_right	=keyboard_check(ord("D"));
 	
+	if(stamina<max_stamina){
+		stamina +=15;
+	}
+	
 	if(keyboard_check_pressed(ord("C"))){
 		state = PLAYER_STATES.IDLE;
 	}
@@ -62,5 +84,16 @@ function player_state_crouch_idle(){
 	}
 	if((_up || _down || _left || _right) &&(keyboard_check_pressed(ord("C")))){
 		state = PLAYER_STATES.WALK;
+	}
+}
+
+function player_state_run(){
+	move_run();
+	
+	if(vel_h == 0 && vel_v == 0){
+		state = PLAYER_STATES.IDLE;
+	}
+	if(stamina<=0 || keyboard_check_released(vk_shift)){
+		state = PLAYER_STATES.WALK
 	}
 }
