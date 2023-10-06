@@ -12,6 +12,23 @@ vel_v = 0;
 vel_h = 0;
 vel_min = 2;
 vel_max = 4;
+
+// Sprite e animação
+dir = 0;
+sprite_grid = ds_grid_create(4,2);
+set_sprite_grid = function(){
+	// Idle
+	sprite_grid[# 0,0] = spr_player_idle_right;
+	sprite_grid[# 1,0] = spr_player_idle_back;
+	sprite_grid[# 2,0] = spr_player_idle_left;
+	sprite_grid[# 3,0] = spr_player_idle_front;
+	// Movement
+	sprite_grid[# 0,1] = spr_player_idle_right;
+	sprite_grid[# 1,1] = spr_player_idle_back;
+	sprite_grid[# 2,1] = spr_player_idle_left;
+	sprite_grid[# 3,1] = spr_player_idle_front;
+}
+
 vel_corre = 6;
 
 move = function(){
@@ -22,6 +39,7 @@ move = function(){
 	_down = keyboard_check(ord("S"));
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
+<<<<<<< HEAD
 	vel_h = (_right - _left)*vel_max;
 	vel_v = (_down - _up)*vel_max;
 	x+=vel_h;
@@ -30,6 +48,18 @@ move = function(){
     //    x = x_antigo;
     //    y = y_antigo;
     //}
+=======
+	
+	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
+	if(_up || _down || _left || _right){
+		vel_h = lengthdir_x(vel_max,_dir);
+		vel_v = lengthdir_y(vel_max,_dir);
+	}
+		else{
+			vel_h = 0;
+			vel_v = 0;
+		}
+>>>>>>> c38a211fb8e158c906e5a0945bb15ceaeeca268d
 }
 
 move_crouch = function(){
@@ -38,6 +68,7 @@ move_crouch = function(){
 	_down = keyboard_check(ord("S"));
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
+<<<<<<< HEAD
 	//var x_antigo = x;
     //var y_antigo = y;
 	
@@ -49,6 +80,17 @@ move_crouch = function(){
     //    x = x_antigo;
 	//	y = y_antigo;
     //}
+=======
+	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
+	if(_up || _down || _left || _right){
+		vel_h = lengthdir_x(vel_min,_dir);
+		vel_v = lengthdir_y(vel_min,_dir);
+	}
+		else{
+			vel_h = 0;
+			vel_v = 0;
+		}
+>>>>>>> c38a211fb8e158c906e5a0945bb15ceaeeca268d
 }
 
 move_run = function(){
@@ -57,12 +99,25 @@ move_run = function(){
 	_down = keyboard_check(ord("S"));
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
+<<<<<<< HEAD
 	//var x_antigo = x;
     //var y_antigo = y;
 	vel_h = (_right - _left)*vel_corre;
 	vel_v = (_down - _up)*vel_corre;
 	x+=vel_h;
 	y+=vel_v;
+=======
+	
+	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
+	if(_up || _down || _left || _right){
+		vel_h = lengthdir_x(vel_corre,_dir);
+		vel_v = lengthdir_y(vel_corre,_dir);
+	}
+		else{
+			vel_h = 0;
+			vel_v = 0;
+		}
+>>>>>>> c38a211fb8e158c906e5a0945bb15ceaeeca268d
 	stamina -=5;
 	//if (collision_rectangle(x, y, x + sprite_width, y + sprite_height, obj_wall, false, true)) {
     //    x = x_antigo;

@@ -1,12 +1,13 @@
 {
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
-  "name": "Room1",
+  "name": "rm_tests",
   "creationCodeFile": "",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
   "instanceCreationOrder": [
+<<<<<<< HEAD:rooms/Room1/Room1.yy
     {"name":"inst_79AADDEC","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_DBC161D","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_71C96BC5","path":"rooms/Room1/Room1.yy",},
@@ -15,6 +16,16 @@
     {"name":"inst_2D88FB21","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_7E698245","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_853D54A","path":"rooms/Room1/Room1.yy",},
+=======
+    {"name":"inst_79AADDEC","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_281609FE","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_3401ACE5","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_DBC161D","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_71C96BC5","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_457AFFBB","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_299AEC40","path":"rooms/rm_tests/rm_tests.yy",},
+    {"name":"inst_2D88FB21","path":"rooms/rm_tests/rm_tests.yy",},
+>>>>>>> c38a211fb8e158c906e5a0945bb15ceaeeca268d:rooms/rm_tests/rm_tests.yy
   ],
   "isDnd": false,
   "layers": [
@@ -50,7 +61,7 @@
   },
   "sequenceId": null,
   "views": [
-    {"hborder":32,"hport":720,"hspeed":-1,"hview":180,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1080,"wview":320,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":128,"hport":720,"hspeed":-1,"hview":180,"inherit":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"vborder":128,"visible":true,"vspeed":-1,"wport":1080,"wview":320,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

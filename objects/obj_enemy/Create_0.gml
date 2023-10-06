@@ -52,6 +52,11 @@ move_enemy_idle = function(){
 }
 
 
+//move_enemy_chase(){
+		
+//}
+
+
 move_enemy_chase = function(){
 	var x_antigo = x;
     var y_antigo = y;

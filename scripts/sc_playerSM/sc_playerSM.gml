@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function player_state_idle(){
+	animation_start(sprite_grid[# dir,0]);
 	var _up, _down, _left, _right;
 	_up		=keyboard_check(ord("W"));
 	_down	=keyboard_check(ord("S")); 
@@ -26,6 +27,7 @@ function player_state_idle(){
 }
 
 function player_state_walk(){
+	animation_start(sprite_grid[# dir,1]);
 	move();
 	if(stamina<max_stamina){
 		stamina += 5;
