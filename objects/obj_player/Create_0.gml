@@ -10,7 +10,21 @@ vel_v = 0;
 vel_h = 0;
 vel_min = 2;
 vel_max = 4;
-
+// Sprite e animação
+dir = 0;
+sprite_grid = ds_grid_create(4,2);
+set_sprite_grid = function(){
+	// Idle
+	sprite_grid[# 0,0] = spr_player_idle_right;
+	sprite_grid[# 1,0] = spr_player_idle_back;
+	sprite_grid[# 2,0] = spr_player_idle_left;
+	sprite_grid[# 3,0] = spr_player_idle_front;
+	// Movement
+	sprite_grid[# 0,1] = spr_player_idle_right;
+	sprite_grid[# 1,1] = spr_player_idle_back;
+	sprite_grid[# 2,1] = spr_player_idle_left;
+	sprite_grid[# 3,1] = spr_player_idle_front;
+}
 move = function(){
 	var _up, _down, _right, _left;
 	_up = keyboard_check(ord("W"));

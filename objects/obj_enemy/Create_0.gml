@@ -55,6 +55,6 @@ move_enemy_idle = function(){
     alarm[0] = tempo;
 }
 
-move_enemy_chase(){
+//move_enemy_chase(){
 		
-}
+//}
