@@ -43,18 +43,31 @@ move_enemy_idle = function(){
     
     // Verifica se há um alvo dentro do campo de visão
     target = instance_place(x, y, obj_player); // Verifica se um jogador está dentro do campo de visão
-    
     if (target != noone) {
-        // O jogador está dentro do campo de visão, siga-o
-        var dir_to_target = point_direction(x, y, target.x, target.y);
-        hvel = lengthdir_x(vel, dir_to_target);
-        vvel = lengthdir_y(vel, dir_to_target);
+		seesPlayer = true;
+      
     }
-    
     // Define um novo alarme para a próxima mudança de direção
     alarm[0] = tempo;
 }
 
+<<<<<<< HEAD
 //move_enemy_chase(){
 		
 //}
+=======
+
+move_enemy_chase = function(){
+   var dir_to_target = point_direction(x, y, target.x, target.y);
+     hvel = lengthdir_x(vel, dir_to_target);
+     vvel = lengthdir_y(vel, dir_to_target);
+	 x += hvel;
+     y += vvel;
+	target = instance_place(x, y, obj_player);
+	if(target == noone){
+		seesPlayer = false;
+	}
+	  // O jogador está dentro do campo de visão, siga-o
+
+}
+>>>>>>> d8d80c08fd147bab95c9cba889a466d593db89b9
