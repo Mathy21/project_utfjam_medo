@@ -51,11 +51,6 @@ move_enemy_idle = function(){
     alarm[0] = tempo;
 }
 
-<<<<<<< HEAD
-//move_enemy_chase(){
-		
-//}
-=======
 
 move_enemy_chase = function(){
    var dir_to_target = point_direction(x, y, target.x, target.y);
@@ -70,4 +65,3 @@ move_enemy_chase = function(){
 	  // O jogador está dentro do campo de visão, siga-o
 
 }
->>>>>>> d8d80c08fd147bab95c9cba889a466d593db89b9
