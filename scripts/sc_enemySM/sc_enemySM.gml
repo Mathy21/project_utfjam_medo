@@ -8,8 +8,28 @@ function enemy_state_neutral(){
 }
 
 function enemy_state_agro(){
+	animation_start(spr_enemy_placeholder);
 	move_enemy_chase();
+	damaged = false;
 	if(seesPlayer == false){
 		state = ENEMY_STATES.NEUTRAL;
+	}
+	if(instance_exists(obj_player)){
+		if(point_distance(x,y,obj_player.x,obj_player.y) <= atkRange){
+			state = ENEMY_STATES.ATK;
+		}
+	}
+}
+
+function enemy_state_atk(){
+	animation_start(spr_enemy_atk_placeholder,spr_enemy_atk_placeholder);
+	enemy_atk(10);
+//	if(instance_exists(obj_player)){
+//		if(point_distance(x,y,obj_player.x,obj_player.y) > atkRange){
+//			state = ENEMY_STATES.AGRO;
+//		}
+//	}
+ if(animation_end()){
+	 state = ENEMY_STATES.AGRO;
 	}
 }
