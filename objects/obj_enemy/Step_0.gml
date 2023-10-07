@@ -1,5 +1,1 @@
-if(seesPlayer == true){
-	move_enemy_chase();
-}else{
-	move_enemy_idle();
-}
+script_execute(state_array[state]);

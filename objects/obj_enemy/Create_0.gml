@@ -83,3 +83,17 @@ move_enemy_chase = function(){
 	  // O jogador está dentro do campo de visão, siga-o
 
 }
+
+enum ENEMY_STATES {
+	NEUTRAL,
+	AGRO,
+	DAMAGED,//TO-DO
+	DIE,//TO-DO
+	ATK//TO-DO
+	
+}
+
+state = ENEMY_STATES.NEUTRAL;
+state_array[ENEMY_STATES.NEUTRAL] = enemy_state_neutral;
+state_array[ENEMY_STATES.AGRO] = enemy_state_agro;
+
