@@ -17,6 +17,7 @@
     {"name":"Idle","order":1,"path":"folders/Sprites/Player/Idle.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":12,"path":"folders/Timelines.yy",},
+    {"name":"Move","order":2,"path":"folders/Sprites/Player/Move.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},

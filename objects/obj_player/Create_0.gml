@@ -3,7 +3,7 @@
 
 hp = 100;
 sanidade = 100;
-max_stamina = 100;
+max_stamina = 20000;
 stamina = 100;
 //crouched = false;
 
@@ -23,10 +23,10 @@ set_sprite_grid = function(){
 	sprite_grid[# 2,0] = spr_player_idle_left;
 	sprite_grid[# 3,0] = spr_player_idle_front;
 	// Movement
-	sprite_grid[# 0,1] = spr_player_idle_right;
-	sprite_grid[# 1,1] = spr_player_idle_back;
-	sprite_grid[# 2,1] = spr_player_idle_left;
-	sprite_grid[# 3,1] = spr_player_idle_front;
+	sprite_grid[# 0,1] = spr_player_move_front;
+	sprite_grid[# 1,1] = spr_player_move_front;
+	sprite_grid[# 2,1] = spr_player_move_front;
+	sprite_grid[# 3,1] = spr_player_move_front;
 }
 
 vel_corre = 6;
@@ -39,23 +39,11 @@ move = function(){
 	_down = keyboard_check(ord("S"));
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fef4e6d6d4d0d193d8743641b90b08d372391e4
-	vel_h = (_right - _left)*vel_max;
-	vel_v = (_down - _up)*vel_max;
-	x+=vel_h;
-	y+=vel_v;
     //if (collision_rectangle(x, y, x + sprite_width, y + sprite_height, obj_wall, false, true)) {
     //    x = x_antigo;
     //    y = y_antigo;
     //}
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> 0fef4e6d6d4d0d193d8743641b90b08d372391e4
 	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
 	if(_up || _down || _left || _right){
 		vel_h = lengthdir_x(vel_max,_dir);
@@ -77,20 +65,26 @@ move_crouch = function(){
 	//var x_antigo = x;
     //var y_antigo = y;
 	
-	vel_h = (_right - _left)*vel_min;
-	vel_v = (_down - _up)*vel_min;
-	x+=vel_h;
-	y+=vel_v;
+	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
+
+	if(_up || _down || _left || _right){
+		vel_h = lengthdir_x(vel_min,_dir);
+		vel_v = lengthdir_y(vel_min,_dir);
+	}
+		else{
+			vel_h = 0;
+			vel_v = 0;
+		}
 	//if (collision_rectangle(x, y, x + sprite_width, y + sprite_height, obj_wall, false, true)) {
     //    x = x_antigo;
 	//	y = y_antigo;
     //}
-<<<<<<< HEAD
+
 _dir = point_direction(0,0,(_right-_left),(_down-_up));
-=======
+
 
 	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
->>>>>>> 0fef4e6d6d4d0d193d8743641b90b08d372391e4
+
 	if(_up || _down || _left || _right){
 		vel_h = lengthdir_x(vel_min,_dir);
 		vel_v = lengthdir_y(vel_min,_dir);
@@ -108,14 +102,6 @@ move_run = function(){
 	_down = keyboard_check(ord("S"));
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
-
-	//var x_antigo = x;
-    //var y_antigo = y;
-	vel_h = (_right - _left)*vel_corre;
-	vel_v = (_down - _up)*vel_corre;
-	x+=vel_h;
-	y+=vel_v;
-
 	
 	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
 	if(_up || _down || _left || _right){
