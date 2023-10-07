@@ -39,7 +39,10 @@ move = function(){
 	_down = keyboard_check(ord("S"));
 	_left = keyboard_check(ord("A"));
 	_right = keyboard_check(ord("D"));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fef4e6d6d4d0d193d8743641b90b08d372391e4
 	vel_h = (_right - _left)*vel_max;
 	vel_v = (_down - _up)*vel_max;
 	x+=vel_h;
@@ -48,7 +51,11 @@ move = function(){
     //    x = x_antigo;
     //    y = y_antigo;
     //}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 0fef4e6d6d4d0d193d8743641b90b08d372391e4
 	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
 	if(_up || _down || _left || _right){
 		vel_h = lengthdir_x(vel_max,_dir);
@@ -78,7 +85,12 @@ move_crouch = function(){
     //    x = x_antigo;
 	//	y = y_antigo;
     //}
+<<<<<<< HEAD
 _dir = point_direction(0,0,(_right-_left),(_down-_up));
+=======
+
+	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
+>>>>>>> 0fef4e6d6d4d0d193d8743641b90b08d372391e4
 	if(_up || _down || _left || _right){
 		vel_h = lengthdir_x(vel_min,_dir);
 		vel_v = lengthdir_y(vel_min,_dir);
