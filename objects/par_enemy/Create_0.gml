@@ -84,6 +84,19 @@ move_enemy_chase = function(){
 
 }
 
+damage_sys = function(dmg){
+	if(dmg == undefined){
+		dmg =1;
+	}
+	if(dmg > 0 && vida > 0){
+		vida -= dmg;
+	}
+	if(vida<=0){
+		//state = ENEMY_STATES.DIE;
+		instance_destroy();
+	}
+}
+
 enum ENEMY_STATES {
 	NEUTRAL,
 	AGRO,

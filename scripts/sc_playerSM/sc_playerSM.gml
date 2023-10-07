@@ -24,6 +24,10 @@ function player_state_idle(){
 	if((keyboard_check(vk_shift)) && (_up || _down || _left || _right)){
 		state = PLAYER_STATES.RUNNING;
 	}
+	if(mouse_check_button_pressed(mb_left)){
+		ds_list_clear(enemy_list);
+		state = PLAYER_STATES.ATK;
+	}
 }
 
 function player_state_walk(){
@@ -100,3 +104,12 @@ function player_state_run(){
 		state = PLAYER_STATES.WALK
 	}
 }
+
+function player_state_atk(){
+	animation_start(spr_player_atk, spr_hb_player_atk);
+	player_atk(5);
+	if(animation_end()){
+		state = PLAYER_STATES.IDLE;
+	}
+}
+

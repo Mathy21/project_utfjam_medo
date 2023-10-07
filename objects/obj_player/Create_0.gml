@@ -6,6 +6,7 @@ sanidade = 100;
 max_stamina = 20000;
 stamina = 100;
 //crouched = false;
+enemy_list = ds_list_create();
 
 //Declarando variáveis para movimento
 vel_v = 0;
@@ -70,29 +71,10 @@ move_crouch = function(){
 	if(_up || _down || _left || _right){
 		vel_h = lengthdir_x(vel_min,_dir);
 		vel_v = lengthdir_y(vel_min,_dir);
-	}
-		else{
+	}else{
 			vel_h = 0;
 			vel_v = 0;
-		}
-	//if (collision_rectangle(x, y, x + sprite_width, y + sprite_height, obj_wall, false, true)) {
-    //    x = x_antigo;
-	//	y = y_antigo;
-    //}
-
-_dir = point_direction(0,0,(_right-_left),(_down-_up));
-
-
-	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
-
-	if(_up || _down || _left || _right){
-		vel_h = lengthdir_x(vel_min,_dir);
-		vel_v = lengthdir_y(vel_min,_dir);
 	}
-		else{
-			vel_h = 0;
-			vel_v = 0;
-		}
 
 }
 
@@ -140,3 +122,4 @@ state_array[PLAYER_STATES.WALK]			= player_state_walk;
 state_array[PLAYER_STATES.RUNNING]		= player_state_run;
 state_array[PLAYER_STATES.IDLE_CROUCH]	= player_state_crouch_idle;
 state_array[PLAYER_STATES.CROUCH]		= player_state_crouch;
+state_array[PLAYER_STATES.ATK]			= player_state_atk;

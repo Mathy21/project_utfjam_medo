@@ -3,6 +3,9 @@
 
 draw_self();
 
+if(mask_index!= -1 && mask_index != sprite_index){
+	draw_sprite(mask_index, image_index,x,y);
+}
 draw_text(x,y+80, stamina);
 draw_text(x,y+100,state);
 
