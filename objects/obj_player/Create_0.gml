@@ -24,9 +24,9 @@ set_sprite_grid = function(){
 	sprite_grid[# 2,0] = spr_player_idle_left;
 	sprite_grid[# 3,0] = spr_player_idle_front;
 	// Movement
-	sprite_grid[# 0,1] = spr_player_move_front;
-	sprite_grid[# 1,1] = spr_player_move_front;
-	sprite_grid[# 2,1] = spr_player_move_front;
+	sprite_grid[# 0,1] = spr_player_move_right;
+	sprite_grid[# 1,1] = spr_player_move_back;
+	sprite_grid[# 2,1] = spr_player_move_left;
 	sprite_grid[# 3,1] = spr_player_move_front;
 }
 

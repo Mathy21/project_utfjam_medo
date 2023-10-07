@@ -1,7 +1,18 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
+<<<<<<< HEAD
     {"name":"sc_combatEnemy","order":1,"path":"scripts/sc_combatEnemy/sc_combatEnemy.yy",},
+=======
+    {"name":"spr_player_move_back","order":2,"path":"sprites/spr_player_move_back/spr_player_move_back.yy",},
+    {"name":"_23233485_e12b_4ba1_a3cc_1b1f74c586b6","order":3,"path":"sprites/_23233485_e12b_4ba1_a3cc_1b1f74c586b6/_23233485_e12b_4ba1_a3cc_1b1f74c586b6.yy",},
+    {"name":"_852d7eef_3bab_4637_982e_88cfb91463f8","order":2,"path":"sprites/_852d7eef_3bab_4637_982e_88cfb91463f8/_852d7eef_3bab_4637_982e_88cfb91463f8.yy",},
+    {"name":"spr_player_move_left","order":3,"path":"sprites/spr_player_move_left/spr_player_move_left.yy",},
+    {"name":"sc_combatEnemy","order":1,"path":"scripts/sc_combatEnemy/sc_combatEnemy.yy",},
+    {"name":"c44a5f68_356e_4764_bf03_ea678dac12a9","order":1,"path":"sprites/c44a5f68_356e_4764_bf03_ea678dac12a9/c44a5f68_356e_4764_bf03_ea678dac12a9.yy",},
+    {"name":"spr_tile_castle_wall","order":2,"path":"sprites/spr_tile_castle_wall/spr_tile_castle_wall.yy",},
+    {"name":"spr_player_move_right","order":1,"path":"sprites/spr_player_move_right/spr_player_move_right.yy",},
+>>>>>>> 41f9caf46788c6ddeb9d6d63106de0f76fa49fe7
     {"name":"spr_enemy_atk_placeholder","order":1,"path":"sprites/spr_enemy_atk_placeholder/spr_enemy_atk_placeholder.yy",},
   ],
 }
