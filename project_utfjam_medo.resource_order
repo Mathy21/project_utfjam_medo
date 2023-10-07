@@ -1,10 +1,7 @@
 {
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
-    {"name":"_23233485_e12b_4ba1_a3cc_1b1f74c586b6","order":3,"path":"sprites/_23233485_e12b_4ba1_a3cc_1b1f74c586b6/_23233485_e12b_4ba1_a3cc_1b1f74c586b6.yy",},
-    {"name":"_852d7eef_3bab_4637_982e_88cfb91463f8","order":2,"path":"sprites/_852d7eef_3bab_4637_982e_88cfb91463f8/_852d7eef_3bab_4637_982e_88cfb91463f8.yy",},
     {"name":"sc_combatEnemy","order":1,"path":"scripts/sc_combatEnemy/sc_combatEnemy.yy",},
-    {"name":"c44a5f68_356e_4764_bf03_ea678dac12a9","order":1,"path":"sprites/c44a5f68_356e_4764_bf03_ea678dac12a9/c44a5f68_356e_4764_bf03_ea678dac12a9.yy",},
     {"name":"spr_enemy_atk_placeholder","order":1,"path":"sprites/spr_enemy_atk_placeholder/spr_enemy_atk_placeholder.yy",},
   ],
 }
