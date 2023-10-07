@@ -9,4 +9,3 @@ function enemy_atk(dmg){
 		damaged = true;
 	}
 }
-

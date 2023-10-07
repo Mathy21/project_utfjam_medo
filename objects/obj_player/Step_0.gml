@@ -25,3 +25,31 @@ if(_col){
 	}
 	vel_v = 0;
 }
+
+
+//Verificando Inimigos em volta do personagem
+var _col1,_col2,_col3;
+
+_col1 = collision_circle(x,y,300,par_enemy,false,true);
+_col2 = collision_circle(x,y,200,par_enemy,false,true);
+_col3 = collision_circle(x,y,100,par_enemy,false,true);
+
+if(_col3 != noone){
+	_col1 = noone
+	_col2 = noone
+}
+if(_col2 != noone){
+	_col1 = noone;
+}
+
+if(_col1 != noone){
+	sanity_sys(1);
+}
+
+if(_col2 != noone){
+	sanity_sys(3);	
+}
+
+if(_col3 != noone){
+	sanity_sys(5);
+}

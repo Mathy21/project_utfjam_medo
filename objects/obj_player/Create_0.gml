@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 hp = 100;
-sanidade = 100;
+sanity = 10000;
 max_stamina = 20000;
 stamina = 100;
 //crouched = false;
@@ -112,6 +112,18 @@ damage_sys = function(dmg){
     if(hp<=0){
        instance_destroy();
     }
+}
+
+sanity_sys = function(hit){
+	if(hit == undefined){
+		hit =1;
+	}
+	if(hit > 0 && sanity > 0){
+		sanity -= hit;
+	}
+	if(sanity<=0){
+		instance_destroy();
+	}
 }
 
 enum PLAYER_STATES {
