@@ -1,9 +1,25 @@
 {
-  "FolderOrderSettings": [],
+  "FolderOrderSettings": [
+    {"name":"Enemies","order":4,"path":"folders/Sprites/Enemies.yy",},
+  ],
   "ResourceOrderSettings": [
+    {"name":"sc_bossSM","order":1,"path":"scripts/sc_bossSM/sc_bossSM.yy",},
+    {"name":"spr_luz","order":5,"path":"sprites/spr_luz/spr_luz.yy",},
+    {"name":"spr_tile_castle_ground","order":3,"path":"sprites/spr_tile_castle_ground/spr_tile_castle_ground.yy",},
+    {"name":"spr_font","order":6,"path":"sprites/spr_font/spr_font.yy",},
     {"name":"spr_yellow_key","order":2,"path":"sprites/spr_yellow_key/spr_yellow_key.yy",},
+    {"name":"obj_boss","order":4,"path":"objects/obj_boss/obj_boss.yy",},
     {"name":"obj_yellowKey","order":2,"path":"objects/obj_yellowKey/obj_yellowKey.yy",},
+    {"name":"snd_walk_footstep","order":2,"path":"sounds/snd_walk_footstep/snd_walk_footstep.yy",},
+    {"name":"tl_castle_ground","order":1,"path":"tilesets/tl_castle_ground/tl_castle_ground.yy",},
+    {"name":"snd_knife","order":5,"path":"sounds/snd_knife/snd_knife.yy",},
+    {"name":"obj_win","order":5,"path":"objects/obj_win/obj_win.yy",},
+    {"name":"snd_monster","order":4,"path":"sounds/snd_monster/snd_monster.yy",},
     {"name":"obj_coin","order":1,"path":"objects/obj_coin/obj_coin.yy",},
+    {"name":"spr_vitoria","order":7,"path":"sprites/spr_vitoria/spr_vitoria.yy",},
+    {"name":"snd_run_footstep","order":3,"path":"sounds/snd_run_footstep/snd_run_footstep.yy",},
+    {"name":"obj_light_control","order":3,"path":"objects/obj_light_control/obj_light_control.yy",},
+    {"name":"snd_money_pickup","order":1,"path":"sounds/snd_money_pickup/snd_money_pickup.yy",},
     {"name":"spr_coin_placeholder","order":1,"path":"sprites/spr_coin_placeholder/spr_coin_placeholder.yy",},
   ],
 }

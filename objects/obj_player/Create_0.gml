@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+step_sound = true;
+run_sound = true;
+atk_sound = true;
+keys_num = 0;
 hp = 100;
 sanity = 10000;
 max_stamina = 20000;
@@ -35,6 +38,8 @@ set_sprite_grid = function(){
 vel_corre = 6;
 
 move = function(){
+	audio_stop_sound(snd_run_footstep);
+	run_sound = true;
 	var _up, _down, _right, _left;
 	//var x_antigo = x;
     //var y_antigo = y;
@@ -49,16 +54,26 @@ move = function(){
 
 	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
 	if(_up || _down || _left || _right){
+		if(step_sound){
+			audio_play_sound(snd_walk_footstep,0,true);
+			step_sound = false;
+		}
 		vel_h = lengthdir_x(vel_max,_dir);
 		vel_v = lengthdir_y(vel_max,_dir);
 	}
 		else{
+			audio_stop_sound(snd_walk_footstep);
+			step_sound = true;
 			vel_h = 0;
 			vel_v = 0;
 		}
 }
 
 move_crouch = function(){
+	step_sound = true;
+	audio_stop_sound(snd_walk_footstep);
+	audio_stop_sound(snd_run_footstep);
+	run_sound = true;
 	var _up, _down, _right, _left;
 	_up = keyboard_check(ord("W"));
 	_down = keyboard_check(ord("S"));
@@ -81,6 +96,8 @@ move_crouch = function(){
 }
 
 move_run = function(){
+	step_sound = true;
+	audio_stop_sound(snd_walk_footstep);
 	var _up, _down, _right, _left;
 	_up = keyboard_check(ord("W"));
 	_down = keyboard_check(ord("S"));
@@ -89,10 +106,16 @@ move_run = function(){
 	
 	var _dir = point_direction(0,0,(_right-_left),(_down-_up));
 	if(_up || _down || _left || _right){
+		if(run_sound){
+			audio_play_sound(snd_run_footstep,0,true);
+			run_sound = false;
+		}
 		vel_h = lengthdir_x(vel_corre,_dir);
 		vel_v = lengthdir_y(vel_corre,_dir);
 	}
 		else{
+			audio_stop_sound(snd_run_footstep);
+			run_sound = true;
 			vel_h = 0;
 			vel_v = 0;
 		}

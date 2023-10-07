@@ -1,0 +1,1 @@
+audio_play_sound(snd_money_pickup,1,false);

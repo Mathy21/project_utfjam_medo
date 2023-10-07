@@ -26,6 +26,7 @@ function player_state_idle(){
 	}
 	if(mouse_check_button_pressed(mb_left)){
 		ds_list_clear(enemy_list);
+		atk_sound = true;
 		state = PLAYER_STATES.ATK;
 	}
 }
@@ -106,6 +107,10 @@ function player_state_run(){
 }
 
 function player_state_atk(){
+	if(atk_sound){
+		audio_play_sound(snd_knife,4,false);
+		atk_sound = false;
+	}
 	animation_start(spr_player_atk, spr_hb_player_atk);
 	player_atk(5);
 	if(animation_end()){
