@@ -93,12 +93,6 @@ move_enemy_chase = function(){
 }
 
 
-enemy_die = function(){
-	if(vida <= 0){
-		state = ENEMY_STATES.DIE;
-	}
-}
-
 damage_sys = function(dmg){
 	if(dmg == undefined){
 		dmg =1;

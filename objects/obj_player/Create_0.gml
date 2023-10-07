@@ -5,6 +5,8 @@ hp = 100;
 sanity = 10000;
 max_stamina = 20000;
 stamina = 100;
+coins = 0;
+has_yellow_key = false;
 //crouched = false;
 enemy_list = ds_list_create();
 

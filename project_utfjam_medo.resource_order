@@ -1,4 +1,9 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"spr_yellow_key","order":2,"path":"sprites/spr_yellow_key/spr_yellow_key.yy",},
+    {"name":"obj_yellowKey","order":2,"path":"objects/obj_yellowKey/obj_yellowKey.yy",},
+    {"name":"obj_coin","order":1,"path":"objects/obj_coin/obj_coin.yy",},
+    {"name":"spr_coin_placeholder","order":1,"path":"sprites/spr_coin_placeholder/spr_coin_placeholder.yy",},
+  ],
 }

@@ -44,6 +44,6 @@ function enemy_state_atk(){
 }
 
 function enemy_state_die(){
-	instance_create_layer(x,y,"Instances",obj_coin);
+	//instance_create_layer(x,y,"Instances",obj_coin);
 	instance_destroy();
 }
