@@ -102,6 +102,18 @@ move_run = function(){
     //}
 }
 
+damage_sys = function(dmg){
+	if(dmg == undefined){
+        dmg =1;
+    }
+    if(dmg > 0 && hp > 0){
+        hp -= dmg;
+    }
+    if(hp<=0){
+       instance_destroy();
+    }
+}
+
 enum PLAYER_STATES {
 	IDLE,
 	WALK,
