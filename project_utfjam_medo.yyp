@@ -42,6 +42,7 @@
   "resources": [
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},},
+    {"id":{"name":"spr_efeito_tela","path":"sprites/spr_efeito_tela/spr_efeito_tela.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"sc_animation","path":"scripts/sc_animation/sc_animation.yy",},},
     {"id":{"name":"spr_player_atk","path":"sprites/spr_player_atk/spr_player_atk.yy",},},
